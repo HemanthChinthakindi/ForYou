@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#25152e">
+  <meta name="description" content="A small book of things I never managed to say." />
+  <title>The Parts I Never Said</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="night-sky" aria-hidden="true">
+    <span class="star star-one"></span><span class="star star-two"></span>
+    <span class="star star-three"></span><span class="star star-four"></span>
+    <span class="falling-petal petal-one">✿</span><span class="falling-petal petal-two">✿</span>
+    <span class="falling-petal petal-three">✿</span><span class="falling-petal petal-four">✿</span>
+    <span class="falling-love love-one">♥</span><span class="falling-love love-two">💕</span>
+    <span class="falling-love love-three">♡</span><span class="falling-love love-four">💗</span>
+    <span class="falling-flower flower-one">🌸</span><span class="falling-flower flower-two">🌷</span>
+    <span class="falling-flower flower-three">🌼</span><span class="falling-flower flower-four">✾</span>
+    <span class="falling-love love-five">💞</span><span class="falling-love love-six">♥</span>
+  </div>
+
+  <main class="story-shell">
+    <p class="eyebrow">A little book, written only for you</p>
+    <section class="book" id="book" aria-label="An openable book">
+      <div class="book-spine" aria-hidden="true"></div>
+      <article class="paper" id="paper" aria-live="polite" aria-atomic="true">
+        <div class="paper-grain" aria-hidden="true"></div>
+        <div class="thread" aria-hidden="true"></div>
+        <section class="cover-content" id="coverContent">
+          <span class="cover-topline">a letter in chapters</span>
+          <div class="cover-rose" aria-hidden="true"><span>✿</span><i></i></div>
+          <h1><span class="cover-emojis" aria-hidden="true">🌹 📖</span><br>The Parts<br><em>I Never Said</em></h1>
+          <p class="cover-dedication">For the girl who still matters to me. 💖</p>
+          <button class="open-button" id="openStory" type="button"><span aria-hidden="true">✦</span> Tap to open our story 🎵 💖</button>
+          <span class="cover-imprint">written with care Hemanth ❤️</span>
+        </section>
+        <div class="page-content" id="pageContent" hidden></div>
+      </article>
+      <span class="page-edge" aria-hidden="true"></span>
+    </section>
+
+    <nav class="book-controls" id="bookControls" aria-label="Book navigation" hidden>
+      <button class="nav-button" id="previousPage" type="button" aria-label="Previous page" title="Previous page">
+        <span aria-hidden="true">←</span><span class="nav-word">Previous</span>
+      </button>
+      <div class="page-meter">
+        <p class="page-count" id="pageCount" aria-live="polite">01 / 16</p>
+        <progress class="story-progress" id="storyProgress" max="16" value="1" aria-label="Reading progress"></progress>
+      </div>
+      <button class="nav-button" id="nextPage" type="button" aria-label="Next page" title="Next page">
+        <span class="nav-word">Next</span><span aria-hidden="true">→</span>
+      </button>
+    </nav>
+    <p class="quiet-note" id="quietNote" hidden>Take your time. There is no right way to read this.</p>
+  </main>
+
+  <button class="sound-button" id="soundButton" type="button" aria-label="Play background music" title="Play background music">
+    <span class="sound-icon" aria-hidden="true">🔇</span><span class="sound-label">Music off</span>
+  </button>
+  <p class="audio-status" id="audioStatus" role="status" hidden></p>
+  <audio id="song" src="The_Rose.mp3" loop preload="auto"></audio>
+  <div class="sr-only" id="announcement" aria-live="polite"></div>
+</body>
+</html>
